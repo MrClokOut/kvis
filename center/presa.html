@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Презентация</header>
+    <main>
+      <div class="slider">
+        <img src="" alt="sleider" id="slideImg">
+        <h1 id="slideTitle">Слайд 1</h1>
+        <p id="slideText">Первый текст презентации</p>
+
+        <div class="btns">
+            <button onclick="prev()">←</button>
+            <button onclick="next()">→</button>
+        </div>
+        
+      </div>
+      <a href="../center/kvis.html">Начать</a>
+    </main>
+    <script>
+      const slides = [
+    { img:"../img/i.webp", title: "Денежные заменители", text: "Что это? Это заменители законного платёжного средства (национальной валюты), которые создаются и вводятся в обращение субъектами хозяйствования для осуществления платежей. Они могут выполнять часть функций денег (средство обращения, платежа), но не являются законным платёжным средством и не обладают абсолютной ликвидностью. " },
+    { img:"../img/i(1).webp", title: "Зачем их создали?", text: "Денежные заменители, или суррогаты, создают, чтобы решить конкретную проблему — нехватку официальных денег или особые задачи в экономике." },
+    { img:"../img/i(3).webp", title: "Виды денежных заменителей", text: "Основные виды: государственные, коммерческие и прочии" },
+    { img:"../img/i(2).webp", title: "Примеры заменителей", text: "Талоны, электронные системы, криптовалюты и т.д" },
+    { img:"../img/i(4).webp", title: "В чем отличие от настроящих денег?", text: "Деньги — это основа, а заменители — это то, что работает рядом с ней, но не заменяет полностью" },
+    { img:"../img/i(5).webp", title: "Риски и ограничения", text: "Риски: правовая неопределённость, волатильность и риск потери стоимости, риск мошенничества. А какие ограничения? Эмиссионный контроль и сложность интеграции в официальную систему" },
+    { img:"../img/i(6).webp", title: "Связь с настоящими деньгами", text: "Выполнение части функций денег, зависимость от законного платёжного средства, появление как реакция на дефицит" },
+    { img:"../img/i(7).webp", title: "Квиз!", text: "А теперь к Квизу!" }
+    ];
+
+      let current = 0;
+
+      function showSlide() {
+        document.getElementById("slideImg").src = slides[current].img;
+        document.getElementById("slideTitle").textContent = slides[current].title;
+        document.getElementById("slideText").textContent = slides[current].text;
+      }
+
+      function next() {
+        if (current < slides.length - 1) {
+          current++;
+          showSlide();
+        }
+      }
+
+      function prev() {
+        if (current > 0) {
+          current--;
+          showSlide();
+        }
+      }
+
+      window.onload = () => {
+        showSlide();
+      };
+    </script>
+  </body>
+</html>

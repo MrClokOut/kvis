@@ -37,15 +37,21 @@ a{
 table{
     width: 90%;
 }
+
 th{
     background-color: gray;
     border-radius: 10px;
     width: 25%;
     font-size: 32px;
 }
+
 th a{
     width: 60%;
     justify-self: center;
+}
+
+th a.used{
+    background-color: rgb(161, 161, 161);
 }
 
 main a{
@@ -69,4 +75,35 @@ button{
     justify-content: center;
     text-align: center;
     padding: 15px;
+}
+
+.slider{
+    width: 80%;
+    height: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider h1{
+    font-size: 64px;
+}
+
+.slider img{
+    width: 30%;
+}
+
+.slider p{
+    font-size: 42px;
+}
+
+.btns{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button.selected{
+    background-color: rgb(161, 161, 161);
 }

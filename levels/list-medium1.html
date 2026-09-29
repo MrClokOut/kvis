@@ -9,13 +9,13 @@
 <body>
     <header>
         Вопрос: <br>
-        Чем денежный заменитель отличается от настоящих денег?
+        Кто может выпускать денежные заменители?
     </header>
     <main>
         <script src="js.js"></script>
-        <button onclick="quest()">Он может использоваться только внутри одной семьи и не действует в магазинах</button>
-        <button onclick="quest(true)">Он не является официальной денежной единицей, но принимается вместо неё при расчётах</button>
-        <button onclick="quest()">Он всегда имеет ту же стоимость, что и настоящие деньги, и ничем от них не отличается</button>
+        <button onclick="quest(this, false, 'medium1')">Только центральный банк</button>
+        <button onclick="quest(this, true, 'medium1')">Банки, компании и государство — в зависимости от вида заменителя</button>
+        <button onclick="quest(this, false, 'medium1')">Только частные лица</button>
 
     </main>
 </body>

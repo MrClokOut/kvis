@@ -9,13 +9,13 @@
 <body>
     <header>
         Вопрос: <br>
-        Что общего у чека и банковской карты?
+        Что будет, если потерять банковскую карту?
     </header>
     <main>
         <script src="js.js"></script>
-        <button onclick="quest(true)">Оба являются денежными заменителями и связаны с банковским счётом</button>
-        <button onclick="quest()">Оба являются настоящими деньгами, только в другой форме</button>
-        <button onclick="quest()">Оба можно использовать только за границей</button>
+        <button onclick="quest(this, true, 'medium3')">Деньги на счёте останутся, если заблокировать карту и восстановить доступ</button>
+        <button onclick="quest(this, false, 'medium3')">Деньги исчезнут вместе с картой</button>
+        <button onclick="quest(this, false, 'medium3')">Карта автоматически превратится в наличные</button>
 
     </main>
 </body>

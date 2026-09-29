@@ -11,6 +11,7 @@
         Квиз по теме: денежные заменители.
     </header>
     <main>
+        <button onclick="restart()">Пройти заново</button>
         <table>
             <thead>
                 <tr>
@@ -22,25 +23,38 @@
             </thead>
             <tbody>
                 <tr>
-                    <th><a href="../levels/list-light1.html">100</a></th>
-                    <th><a href="../levels/list-medium1.html">250</a></th>
-                    <th><a href="../levels/list-hard1.html">350</a></th>
-                    <th><a href="../levels/list-hardcore1.html">500</a></th>
+                    <th><a href="../levels/list-light1.html" id="light1">100</a></th>
+                    <th><a href="../levels/list-medium1.html" id="medium1">250</a></th>
+                    <th><a href="../levels/list-hard1.html" id="hard1">350</a></th>
+                    <th><a href="../levels/list-hardcore1.html" id="hardcore1">500</a></th>
                 </tr>
                 <tr>
-                    <th><a href="../levels/list-light2.html">100</a></th>
-                    <th><a href="../levels/list-medium2.html">250</a></th>
-                    <th><a href="../levels/list-hard2.html">350</a></th>
-                    <th><a href="../levels/list-hardcore2.html">500</a></th>
+                    <th><a href="../levels/list-light2.html" id="light2">100</a></th>
+                    <th><a href="../levels/list-medium2.html" id="medium2">250</a></th>
+                    <th><a href="../levels/list-hard2.html" id="hard2">350</a></th>
+                    <th><a href="../levels/list-hardcore2.html" id="hardcore2">500</a></th>
                 </tr>
                 <tr>
-                    <th><a href="../levels/list-light3.html">100</a></th>
-                    <th><a href="../levels/list-medium3.html">250</a></th>
-                    <th><a href="../levels/list-hard3.html">350</a></th>
-                    <th><a href="../levels/list-hardcore3.html">500</a></th>
+                    <th><a href="../levels/list-light3.html" id="light3">100</a></th>
+                    <th><a href="../levels/list-medium3.html" id="medium3">250</a></th>
+                    <th><a href="../levels/list-hard3.html" id="hard3">350</a></th>
+                    <th><a href="../levels/list-hardcore3.html" id="hardcore3">500</a></th>
                 </tr>
             </tbody>
         </table>
     </main>
 </body>
+<script>
+    window.onload = () => {
+            document.querySelectorAll('a[id]').forEach(link => {
+                if (sessionStorage.getItem(link.id) === 'used') {
+                    link.classList.add('used');
+                }
+            });
+        };
+        function restart() {
+            sessionStorage.clear();
+            location.reload();
+        }
+</script>
 </html>

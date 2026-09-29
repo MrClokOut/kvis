@@ -9,14 +9,14 @@
 <body>
     <header>
         Вопрос: <br>
-        В чём главный риск использования денежных заменителей?
+        Как денежные заменители отражаются в бухгалтерии?
     </header>
     <main>
         <script src="js.js"></script>
-        <button onclick="quest()">Они всегда обесцениваются быстрее настоящих денег в любой экономической ситуации</button>
-        <button onclick="quest(true)">Их ценность и приём зависят от доверия к тому, кто их выпустил, и от условий использования</button>
-        <button onclick="quest()">Их нельзя использовать повторно после первой операции</button>
-        <button onclick="quest()">Они не защищены законом ни в одной стране мира</button>
+        <button onclick="quest(this, false, 'hard3')">Как товарные запасы</button>
+        <button onclick="quest(this, true, 'hard3')">Как обязательства или средства на счёте, а не как наличные</button>
+        <button onclick="quest(this, false, 'hard3')">Как основные средства</button>
+        <button onclick="quest(this, false, 'hard3')">Никак не отражаются</button>
     </main>
 </body>
 </html>

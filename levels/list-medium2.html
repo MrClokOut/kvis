@@ -13,9 +13,9 @@
     </header>
     <main>
         <script src="js.js"></script>
-        <button onclick="quest(true)">Потому что она даёт доступ к деньгам на счёте и позволяет расплачиваться без наличных</button>
-        <button onclick="quest()">Потому что она сама по себе является валютой и её можно обменять на золото</button>
-        <button onclick="quest()">Потому что её выпускает только государство и без неё нельзя получить зарплату</button>
+        <button onclick="quest(this, true, 'medium2')">Заменитель используется для расчётов, а ценная бумага — для получения дохода или доли</button>
+        <button onclick="quest(this, false, 'medium2')">Заменитель можно продать на бирже, а ценную бумагу — нет</button>
+        <button onclick="quest(this, false, 'medium2')">Заменитель выпускает государство, а ценную бумагу — банк</button>
 
     </main>
 </body>

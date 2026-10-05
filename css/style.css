@@ -11,7 +11,7 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 150px;
     font-size: 42px;
     color: aliceblue;
     margin-bottom: 85px;
@@ -79,7 +79,7 @@ button{
 
 .slider{
     width: 80%;
-    height: 880px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
